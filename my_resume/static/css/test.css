@@ -1,0 +1,11 @@
+.test{
+    background: antiquewhite;
+}
+.panel-heading{
+    width: 90%;
+    padding: 30px 50px;
+}
+.main-header__img-notifications{
+    width: 20%;
+    height: 20%;
+}

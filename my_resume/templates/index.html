@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+{% block title %} О сайте {% endblock %}
+{% block content %}
+{% for n in name %}
+   <div class="panel-heading ">
+       <h3>Имя</h3>-{{ n.name }}
+       <h4>Фамилия</h4>-{{ n.surname }}
+       <img src="{% static 'media/lampa.jpg' %}"  class="main-header__img-notifications" />
+   </div>
+{%endfor%}
+
+{% for s in skill %}
+    <div class="panel-skills">
+        <h3>Навыки</h3>{{s.skill}}
+    </div>
+{%endfor%}
+
+{% for st in study %}
+    <div class="panel-skills">
+        <h2>Название заведения</h2>{{ st.study_head }}
+        <h2>Описание</h2>{{ st.study_center }}
+        <h2>Начало обучения</h2>{{ st.study_date }}
+        <h2>Окончание обучения</h2>{{ st.study_finish_date }}
+    </div>
+{%endfor%}
+
+{% for h in himself %}
+    <div class="panel-skills">
+        <h2>О себе</h2>{{h.himself}}
+    </div>
+{%endfor%}
+
+{% for c in certificate %}
+    <div class="panel-skills" >
+        <h2>Название</h2>{{c.name_certif}}
+        <h2>ФОтка сертификата</h2>{{c.certificates}}
+    </div>
+{%endfor%}
+
+{% for p in project %}
+    <div class="panel-skills" >
+        <h2>проект </h2>{{p.name_proj}}
+        <h2>ФОтка проекта</h2>{{p.project}}
+    </div>
+{%endfor%}
+
+{% endblock %}
