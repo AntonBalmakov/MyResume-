@@ -8,7 +8,7 @@ class Name(models.Model):
     """
     name = models.TextField(max_length=15, name='name')
     surname = models.TextField(max_length=15, name='surname')
-    img = models.ImageField(upload_to='media')
+    img = models.ImageField(upload_to='media', blank=True, null=True)
 
     def __str__(self):
         return "%s %s" % (self.name, self.surname)

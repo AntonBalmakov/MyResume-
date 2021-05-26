@@ -1,49 +1,330 @@
-<!DOCTYPE html>
-{% extends "base.html" %}
+<!DOCTYPE html >
 {% load static %}
-{% block title %} О сайте {% endblock %}
-{% block content %}
-{% for n in name %}
-   <div class="panel-heading ">
-       <h3>Имя</h3>-{{ n.name }}
-       <h4>Фамилия</h4>-{{ n.surname }}
-       <img src="{% static 'media/lampa.jpg' %}"  class="main-header__img-notifications" />
-   </div>
-{%endfor%}
 
-{% for s in skill %}
-    <div class="panel-skills">
-        <h3>Навыки</h3>{{s.skill}}
-    </div>
-{%endfor%}
+<html xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>My Resume</title>
+		<!-- reset css -->
+		<link rel="stylesheet" type="text/css" href="../static/css/reset.css" />
+		<!-- typography css -->
+		<link rel="stylesheet" type="text/css" href="../static/css/typography.css" />
+		<!-- main css -->
+		<link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+		<!-- print css -->
+		<link rel="stylesheet" type="text/css" href="../static/css/print.css" media="print" />
+		<!-- include jQuery library -->
+		<script type="text/javascript" src="../static/js/jquery-1.4.4.min.js"></script>
+		<!-- slider/fade script -->
+		<script src="../static/js/jquery.bxSlider.min.js" type="text/javascript"></script>
+		<!-- vtip script -->
+		<script type="text/javascript" src="../static/js/vtip.js"></script>
+		<!-- cufon script and fonts -->
+		<script type="text/javascript" src="../static/js/cufon-yui.js"></script>
+		<script type="text/javascript" src="../static/js/DilleniaUPC_400.font.js"></script>
+		<script type="text/javascript" src="../static/js/Orator_Std_400.font.js"></script>
+		<!-- Initialize Background animation -->
+		<script type="text/javascript" src="../static/js/jquery.bgpos.js"></script>
+		<!-- Initialize some scripts -->
+		<script type="text/javascript" src="../static/js/init.js"></script>
+		<!-- jquery form script for contact form -->
+		<script type="text/javascript" src="../static/js/jquery.form.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="container">
+				<div id="bg-container">
+					<div id="top-bg"></div>
+					<div class="main">
+						<div class="ribbon"></div>
+						<div class="content">
 
-{% for st in study %}
-    <div class="panel-skills">
-        <h2>Название заведения</h2>{{ st.study_head }}
-        <h2>Описание</h2>{{ st.study_center }}
-        <h2>Начало обучения</h2>{{ st.study_date }}
-        <h2>Окончание обучения</h2>{{ st.study_finish_date }}
-    </div>
-{%endfor%}
+							<div id="front-info">
+								{% for n in name %}
+								<h1><span class="theme-color">{{ n.name }}</span> {{ n.surname }} </h1>
+								{% endfor %}
+								<div class="clear"></div>
+								<h2 class="jobtitle">Back-end Developer</h2>
+							</div>
 
-{% for h in himself %}
-    <div class="panel-skills">
-        <h2>О себе</h2>{{h.himself}}
-    </div>
-{%endfor%}
+							<div class="clear"></div>
 
-{% for c in certificate %}
-    <div class="panel-skills" >
-        <h2>Название</h2>{{c.name_certif}}
-        <h2>ФОтка сертификата</h2>{{c.certificates}}
-    </div>
-{%endfor%}
+								{% for h in himself %}
+							<div class="textblock">
+								<p>
+									<span class="theme-color">{{h.himself}}</span>
+								</p>
+							</div>
+								{%endfor%}
 
-{% for p in project %}
-    <div class="panel-skills" >
-        <h2>проект </h2>{{p.name_proj}}
-        <h2>ФОтка проекта</h2>{{p.project}}
-    </div>
-{%endfor%}
+							<!--============================================================================-->
+							<!--============================ Technical Skills ==============================-->
+							<!--============================================================================-->
+							<div class="item">	
+								<h2 class="h-border theme-color">Technical Skills</h2>
+								<div class="grid_4">
+									{% for s in skill %}
+									<div class="progress-label">
+										<h4>{{s.skill}}</h4>
+									</div>
+									{%endfor%}
+								</div>
+								<div class="grid_4">
+									<div class="progress">
+										<div class="progressBar">
+											<div class="progressValue">
+												<!-- The progress bar will automatically change when you change the value inside the span tag below. -->
+												<!-- You can also override the value in the title attribue. -->
+												<span title="">90%</span>
+											</div>
+										</div>
+									</div>	
+									<div class="progress">
+										<div class="progressBar">
+											<div class="progressValue">
+												<!-- The progress bar will automatically change when you change the value inside the span tag below. -->
+												<!-- You can also override the value in the title attribue. -->
+												<span title="">80%</span>
+											</div>
+										</div>
+									</div>	
+									<div class="progress">
+										<div class="progressBar">
+											<div class="progressValue">
+												<!-- The progress bar will automatically change when you change the value inside the span tag below. -->
+												<!-- You can also override the value in the title attribue. -->
+												<span title="">80%</span>
+											</div>
+										</div>
+									</div>
+									<div class="progress">
+										<div class="progressBar">
+											<div class="progressValue">
+												<!-- The progress bar will automatically change when you change the value inside the span tag below. -->
+												<!-- You can also override the value in the title attribue. -->
+												<span title="">70%</span>
+											</div>
+										</div>
+									</div>
+									<div class="progress">
+										<div class="progressBar">
+											<div class="progressValue">
+												<!-- The progress bar will automatically change when you change the value inside the span tag below. -->
+												<!-- You can also override the value in the title attribue. -->
+												<span title="">80%</span>
+											</div>
+										</div>
+									</div>
+									<div class="progress">
+										<div class="progressBar">
+											<div class="progressValue">
+												<!-- The progress bar will automatically change when you change the value inside the span tag below. -->
+												<!-- You can also override the value in the title attribue. -->
+												<span title="">80%</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="grid_4 last">
+									<div class="testimonials">
+										<div class="textblock">
+											<p>
+												Has shown himself to be a hardworking, diligent programmer.
+												Able to break down large tasks into smaller ones.
+											</p>
+											<p class="author">
+												<span class="theme-color">Vlad Bubeniuk</span> (Client)
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="clear"></div>
+							</div> <!-- // .item -->
+							<!--============================================================================-->
+							<!--============================= Work Experience ==============================-->
+							<!--============================================================================-->	
+							<div class="item">	
+								<h2 class="h-border theme-color">Work Experience</h2>
+								
+								<div class="grid_4">
+									<h3 class="title">АксиИмпорт</h3>
+									<h3 class="description1">Web Software Developer</h3>
+									<h4 class="description2">June 2019 - Present</h4>
+								</div>
+								<div class="grid_4">
+									A project to create an online learning school. The project uses python, django, django-REST framework, dajngo api, HTML,CSS, JS.
+								</div>
+								<div class="grid_4 last">
+									<h4>My Work:</h4>
+									<ul class="list">
+										<li>Web Design</li>
+										<li>Back-end  </li>
+										<li>Rest Api</li>
+									</ul>
+								</div>
+								<div class="divider-45"></div>
+								<div class="grid_4">
+									<h3 class="title">Peleng</h3>
+									<h3 class="description1">Software engineer</h3>
+									<h4 class="description2">August 2019 - July 2021</h4>
+									<h4 class="description2">2 years</h4>
+								</div>
+								<div class="grid_4">
+									<h4>Used tools:</h4>
+									<ul class="checklist">
+										<li>Pycharm</li>
+										<li>Linux</li>
+										<li>Notepad++</li>
+									</ul>
+								</div>
+								<div class="grid_4 last">
+									Project revision. Full development cycle. Mentoring
+								</div>
+								
+								<div class="clear"></div>
+							</div> <!-- // .item -->
+							
+							<!--============================================================================-->
+							<!--================================ Education =================================-->
+							<!--============================================================================-->
+							<div class="item">	
+								<h2 class="h-border theme-color">Education</h2>
+								
+								<div class="grid_4">
+									<h3 class="title">Belarusian National Technical University</h3>
+									<h3 class="description1">Safety engineer</h3>
+									<h4 class="description2">June 2013 - July 2018</h4>
+								</div>
+								<div class="grid_8 last">
+									<p>
+										Specialist diploma in engineering
+									</p>
+								</div>
+								<div class="divider-45"></div>
+								<div class="grid_4">
+									<h3 class="title">Stormnet Technologies</h3>
+									<h3 class="description1">Python/Django</h3>
+									<h4 class="description2">april 2020 </h4>
+								</div>
+								<div class="grid_4">
+									<p>
+										Learn Python syntax;
+										learn how to interact with databases, work with networking tools, process
+										images, and design a graphical user interface;
+										learn how to work with Django, a free framework created for Python-based web
+										applications.
+									</p>
+								</div>
+								<div class="grid_4 last">
+									<ul class="arrow">
+										<li>Python</li>
+										<li>Web Development</li>									
+										<li>Django</li>
+									</ul>
+								</div>
+								<div class="clear"></div>
+							</div> <!-- // .item -->
+							<!--============================================================================-->
+							<!--======================== Personal and Contacy Info =========================-->
+							<!--============================================================================-->
+							<div class="item">	
+								
+								<h2 class="h-border theme-color">Personal and Contact Info</h2>
+								
+								<div class="grid_4">
+									<ul class="list">
+										<li class="email">balmakov.anton@gmail.com</li>
+										<li class="phone">+375291775009</li>
+										<li class="address">Minsk, Belarus</li>
+									</ul>
+								</div>
+								<div class="grid_8 last">
+									<form action="sendemail.php" id="contact_us" method="post">
+										<div class="rowElem">
+											<div class="field">
+												<input type="text" name="Name" id="name" value="Name" />
+											</div>
+											<div class="error1">
+												Incorrect Name
+											</div>	
+										</div>
+										<div class="rowElem">
+											<div class="field">	
+												<input type="text" name="Email" id="email" value="Email" />
+											</div>
+											<div class="error2">
+												Incorrect Email
+											</div>	
+										</div>	
+										<div class="rowElem">
+											<div class="field">	
+												<input type="text" name="Subject" id="subject" value="Subject" />
+											</div>
+											<div class="error4">
+												Incorrect Subject
+											</div>	
+										</div>	
+										<div class="rowElem" id="textarea">
+											<div class="textarea">	
+												<textarea name="Message" rows="5" cols="25" id="message_input"></textarea>
+											</div>
+											<div class="error3">
+												Enter a Message
+											</div>	
+										</div>	
+										<div class="clear"></div>
+										<!--
+										<div id="submit">
+											<input type="submit" value="Send Message" name="submitButton"  class="form-submit" />
+										</div>
+										-->
+										<a id="submit" class="button-large"><span>Send Message</span></a>
+										<div class="clear"></div>
+									</form>
+									<div id="note">
+										<p class="textblock-small">Your message has been sent. Will get back to you as soon as possible. Thank you!</p>
+									</div>	
+								</div>
+								<div class="clear"></div>
+							</div> <!-- // .item -->
+							<!--============================================================================-->
+							<!--================================= Footer ===================================-->
+							<!--============================================================================-->
+							<div id="footer">
+								<div class="grid_6" id="footer-text">
+									&copy; 2020. Anton Balmakov
+								</div>
+								<div class="grid_6 last" id="footer-social">
+									<a href="#" class="grayscale vtip" title="Download Resume" >
+										<span><img src="../static/images/icons/grayscale/save_download_32.png" alt="" /></span>
+									</a>
+									<!-- You can link you social network sites here -->
 
-{% endblock %}
+									<a href="https://www.facebook.com/anton.balmakov" class="grayscale vtip" title="Facebook" >
+										<span><img src="../static/images/icons/grayscale/facebook_32.png" alt="" /></span>
+									</a>
+									<a href="https://www.linkedin.com/in/anton-dmitrievich1996/" class="grayscale vtip" title="LinkedIn" >
+										<span><img src="../static/images/icons/grayscale/linkedin_32.png" alt="" /></span>
+									</a>
+									<a href="https://join.skype.com/invite/o7OThgn4OwN0" class="grayscale vtip" title="Skype" >
+										<span><img src="../static/images/icons/grayscale/skype_32.png" alt="" /></span>
+									</a>
+									
+									<!-- More Icons at images/icons/grayscale -->
+								</div>
+							</div> <!-- // #footer -->
+							<!-- Don't forget to clear the float before the closing tag of class ".content" div. -->
+							<div class="clear"></div>
+						</div> <!-- // .content -->
+					</div> <!-- // .main -->
+					<!-- Bottom Background -->
+					<div class="bottom-bg"></div>
+					<div class="clear"></div>
+				</div> <!-- // #bg-container -->	
+			</div> <!-- // #container -->
+		</div> <!-- // #wrapper -->
+		<div class="clear"></div>
+		<!-- Initialize contact form script -->
+		<script type="text/javascript" src="../static/js/init_form.js"></script>
+	</body>
+</html>
