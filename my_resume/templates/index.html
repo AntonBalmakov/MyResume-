@@ -1,4 +1,5 @@
 <!DOCTYPE html >
+
 {% load static %}
 
 <html xml:lang="en" lang="en">
@@ -30,15 +31,14 @@
 		<!-- jquery form script for contact form -->
 		<script type="text/javascript" src="../static/js/jquery.form.js"></script>
 	</head>
+<span></span>
 	<body>
 		<div id="wrapper">
 			<div id="container">
 				<div id="bg-container">
 					<div id="top-bg"></div>
 					<div class="main">
-						<div class="ribbon"></div>
 						<div class="content">
-
 							<div id="front-info">
 								{% for n in name %}
 								<h1><span class="theme-color">{{ n.name }}</span> {{ n.surname }} </h1>
@@ -239,7 +239,7 @@
 									</ul>
 								</div>
 								<div class="grid_8 last">
-									<form action="sendemail.php" id="contact_us" method="post">
+									<form action="static/sendemail.php" id="contact_us" method="post">
 										<div class="rowElem">
 											<div class="field">
 												<input type="text" name="Name" id="name" value="Name" />
@@ -281,7 +281,9 @@
 										<a id="submit" class="button-large"><span>Send Message</span></a>
 										<div class="clear"></div>
 									</form>
-									<div id="note">
+
+
+								<div id="note">
 										<p class="textblock-small">Your message has been sent. Will get back to you as soon as possible. Thank you!</p>
 									</div>	
 								</div>
@@ -295,9 +297,9 @@
 									&copy; 2020. Anton Balmakov
 								</div>
 								<div class="grid_6 last" id="footer-social">
-									<a href="#" class="grayscale vtip" title="Download Resume" >
-										<span><img src="../static/images/icons/grayscale/save_download_32.png" alt="" /></span>
-									</a>
+<!--									<a href="#" class="grayscale vtip" title="Download Resume" >-->
+<!--										<span><img src="../static/images/icons/grayscale/save_download_32.png" alt="" /></span>-->
+<!--									</a>-->
 									<!-- You can link you social network sites here -->
 
 									<a href="https://www.facebook.com/anton.balmakov" class="grayscale vtip" title="Facebook" >

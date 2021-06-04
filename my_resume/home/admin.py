@@ -8,3 +8,4 @@ admin.site.register(Himself)
 admin.site.register(Certificates)
 admin.site.register(Projects)
 admin.site.register(Contact)
+
